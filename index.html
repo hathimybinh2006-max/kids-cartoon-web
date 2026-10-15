@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidsToon - Kênh Phim Hoạt Hình Chọn Lọc Cho Thiếu Nhi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER CỐ ĐỊNH (FIXED HEADER) -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo bên trái -->
+            <div class="logo">
+                <a href="#">
+                    <span class="logo-icon">&#127916;</span>
+                    <span class="logo-text">Kids<span>Toon</span></span>
+                </a>
+            </div>
+
+            <!-- Thanh tìm kiếm phim -->
+            <div class="search-bar">
+                <input type="text" placeholder="Tìm kiếm phim hoạt hình yêu thích...">
+                <button type="button">&#128269; Tìm</button>
+            </div>
+
+            <!-- Head-links điều hướng -->
+            <nav class="head-links">
+                <a href="#home" class="active">Trang chủ</a>
+                <a href="#new">Mới cập nhật</a>
+                <a href="#top">Xem nhiều nhất</a>
+                <a href="#safe">Góc phụ huynh</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. MAIN LAYOUT (CONTENT CONTAINER) -->
+    <div class="main-layout">
+
+        <!-- RIGHT CONTENT (Khu vực xem video chính) -->
+        <main class="right-content">
+            <!-- Video Player: Sử dụng cả iframe YouTube và video thẻ HTML5 -->
+            <div class="video-player-container">
+                <iframe 
+                    id="main-video" 
+                    src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=0" 
+                    title="Trình phát video hoạt hình" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Video Info -->
+            <div class="video-info">
+                <div class="video-badge">&#127775; Thuyết Minh Tiếng Việt | Chất lượng Full HD 1080p</div>
+                <h1 class="video-title" id="current-title">Những Chuyến Phiêu Lưu Kỳ Thú Của Chú Mèo Dũng Cảm - Tập 1</h1>
+                
+                <div class="video-meta">
+                    <span>&#128065; 1.250.400 lượt xem</span> &bull; 
+                    <span>&#128197; Cập nhật: Hôm nay</span> &bull; 
+                    <span class="safe-badge">&#128737; An toàn 100% cho trẻ nhỏ</span>
+                </div>
+
+                <div class="video-actions">
+                    <button class="btn-action">&#128077; Thích (45K)</button>
+                    <button class="btn-action">&#128257; Chia sẻ</button>
+                    <button class="btn-action">&#10084; Lưu vào danh sách</button>
+                </div>
+
+                <div class="video-description">
+                    <h3>Tóm tắt nội dung:</h3>
+                    <p>
+                        Bộ phim hoạt hình giáo dục giàu tính nhân văn kể về hành trình khám phá thế giới tự nhiên và bài học về tình bạn, lòng tốt và tinh thần dũng cảm. Phim không chèn quảng cáo, hình ảnh tươi sáng, âm thanh thuyết minh chuẩn giọng chuẩn giúp các bé vừa giải trí vừa phát triển kỹ năng ngôn ngữ.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Trình phát Video thẻ HTML5 dự phòng/bổ sung -->
+            <div class="html5-video-section">
+                <h3>&#128250; Trình phát Video HTML5 Nội bộ (Thẻ &lt;video&gt;)</h3>
+                <video controls width="100%" poster="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+                </video>
+            </div>
+        </main>
+
+        <!-- LEFT CONTENT (Sidebar danh sách video có sẵn) -->
+        <aside class="left-content">
+            <div class="sidebar-header">
+                <h2>&#128218; Danh Sách Phim Tuyển Chọn</h2>
+                <div class="filter-tabs">
+                    <button class="tab-btn active">Mới nhất</button>
+                    <button class="tab-btn">Phổ biến</button>
+                </div>
+            </div>
+
+            <!-- Danh sách các video items -->
+            <div class="video-list">
+                <!-- Video Item 1 -->
+                <div class="video-item active-item">
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=300&q=80" alt="Tập 1">
+                        <span class="duration">12:45</span>
+                    </div>
+                    <div class="item-details">
+                        <h4>Tập 1: Chú Mèo Dũng Cảm Và Rừng Xanh</h4>
+                        <p class="channel">Xứ Sở Hoạt Hình</p>
+                        <p class="views">1.2M lượt xem</p>
+                    </div>
+                </div>
+
+                <!-- Video Item 2 -->
+                <div class="video-item">
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=300&q=80" alt="Tập 2">
+                        <span class="duration">15:10</span>
+                    </div>
+                    <div class="item-details">
+                        <h4>Tập 2: Chuyến Thám Hiểm Lâu Đài Trên Mây</h4>
+                        <p class="channel">Xứ Sở Hoạt Hình</p>
+                        <p class="views">890K lượt xem</p>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="video-item">
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=300&q=80" alt="Tập 3">
+                        <span class="duration">11:20</span>
+                    </div>
+                    <div class="item-details">
+                        <h4>Tập 3: Cuộc Thi Chạy Của Các Bạn Muông Thú</h4>
+                        <p class="channel">Cổ Tích Nhi Đồng</p>
+                        <p class="views">650K lượt xem</p>
+                    </div>
+                </div>
+
+                <!-- Video Item 4 -->
+                <div class="video-item">
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=300&q=80" alt="Tập 4">
+                        <span class="duration">18:05</span>
+                    </div>
+                    <div class="item-details">
+                        <h4>Tập 4: Bí Mật Đáy Đại Dương Kỳ Ảo</h4>
+                        <p class="channel">Khám Phá Cùng Bé</p>
+                        <p class="views">720K lượt xem</p>
+                    </div>
+                </div>
+
+                <!-- Video Item 5 -->
+                <div class="video-item">
+                    <div class="thumb-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=300&q=80" alt="Tập 5">
+                        <span class="duration">14:30</span>
+                    </div>
+                    <div class="item-details">
+                        <h4>Tập 5: Tình Bạn Diệu Kỳ Dưới Ánh Trăng</h4>
+                        <p class="channel">Cổ Tích Nhi Đồng</p>
+                        <p class="views">950K lượt xem</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- 3. FOOTER BẢN QUYỀN -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 <strong>KidsToon Vietnam</strong> - Website Hoạt Hình Chọn Lọc An Toàn Cho Thiếu Nhi.</p>
+            <p>Cam kết 100% nội dung lành mạnh &bull; Thuyết minh tiếng Việt &bull; Không quảng cáo thương mại gây phiền nhiễu.</p>
+            <div class="footer-links">
+                <a href="#">Chính sách bảo vệ trẻ em</a> | 
+                <a href="#">Điều khoản sử dụng</a> | 
+                <a href="#">Đóng góp ý kiến</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tương tác chuyển đổi video khi nhấn vào danh sách bên trái
+        const videoItems = document.querySelectorAll('.video-item');
+        const currentTitle = document.getElementById('current-title');
+
+        videoItems.forEach(item => {
+            item.addEventListener('click', function() {
+                videoItems.forEach(el => el.classList.remove('active-item'));
+                this.classList.add('active-item');
+                
+                const titleText = this.querySelector('h4').textContent;
+                if (currentTitle) {
+                    currentTitle.textContent = titleText + " (Đang phát)";
+                }
+            });
+        });
+
+        // Tương tác tab Mới nhất / Phổ biến
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
